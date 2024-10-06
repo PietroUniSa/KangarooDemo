@@ -1,0 +1,219 @@
+/* Reset CSS generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stili globali per il body */
+body {
+    font-family: sans-serif;
+    background-color: #dfdfdf;
+    padding: 20px;
+    color: #333; /* Colore del testo nero */
+}
+
+/* Container principale che contiene il form di registrazione */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Card che contiene il form di registrazione */
+.card {
+    flex-direction: column;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+}
+
+/* Stile per il titolo del form */
+.title {
+    text-align: center;
+    color: black; /* Colore arancione per il titolo */
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+.inputBoxx {
+    width: 60%;
+}
+
+.inputBoxx input {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+
+.inputBoxx label {
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #020202;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+}
+.inputBoxx input::placeholder{
+    visibility: hidden;
+}
+
+.inputBoxx input:focus::placeholder{
+    visibility: visible;
+    color: #80959690;
+}
+
+
+
+.inputBoxx input[type="radio"]{
+    accent-color: #9590a8;
+    transform: scale(0.8);
+}
+
+.inputBoxx input[type="checkbox"]{
+    accent-color: #9590a8;
+    transform: scale(0.4);
+}
+
+/* Container per ogni input del form */
+.inputBox {
+    position: relative;
+}
+
+/* Stili per gli input del form */
+.inputBox input {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+
+/* Stile per gli input quando sono in focus */
+.inputBox input:focus {
+    border-color: #ff9229; /* Bordo arancione quando l'input è in focus */
+}
+
+/* Stile per le etichette degli input */
+.inputBox label {
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 20px;
+    color: #999; /* Colore grigio per l'etichetta */
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: top 0.3s, font-size 0.3s, color 0.3s; /* Transizioni per il movimento e il colore dell'etichetta */
+    background-color: #fff; /* Sfondo bianco per l'etichetta */
+    padding: 0 5px;
+}
+
+/* Stile per le etichette quando l'input è validato, in focus o non vuoto */
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label,
+.inputBox .notEmpty {
+    top: -10px; /* Sposta l'etichetta in alto */
+    font-size: 0.8em;
+    color: #ff9229; /* Colore arancione per l'etichetta */
+    padding: 0 5px;
+}
+
+/* Stile per gli input quando sono validati */
+.inputBox input:valid {
+    border-color: #ff9229; /* Bordo arancione per gli input validi */
+}
+
+/* Container per il pulsante di submit */
+.submitContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stili per il pulsante di submit */
+.submit {
+    height: 50px;
+    width: 100%; /* Larghezza del pulsante */
+    border-radius: 5px; /* Angoli arrotondati */
+    border: 2px solid #ff9229; /* Bordo arancione */
+    cursor: pointer;
+    background-color: #ff9229; /* Sfondo arancione */
+    transition: background-color 0.3s, color 0.3s; /* Transizioni per il colore e lo sfondo */
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: white; /* Colore del testo bianco */
+}
+
+/* Stile per il pulsante di submit al passaggio del mouse */
+.submit:hover {
+    background: #000000;
+    color: white;
+    transform: scale(1.05, 1);
+}
+
+/* Stile per i messaggi di errore */
+.error {
+    color: #634b66;
+    font-size: 0.8em;
+}
+
+/* Stile per i link */
+.link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link span {
+    color: black; /* Colore arancione per il testo del link */
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.link a {
+    color: #410975; /* Colore arancione per il testo del link */
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Stile per i link al passaggio del mouse */
+.link a:hover {
+    color: black; /* Colore nero al passaggio del mouse */
+    text-decoration: underline;
+}
+
+/* Media query per dispositivi con larghezza massima di 900px */
+@media only screen and (max-width: 900px) {
+    .card {
+        padding: 20px;
+    }
+}
+
+/* Media query per dispositivi con larghezza massima di 480px */
+@media only screen and (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+
+    .submit {
+        width: 100%; /* Larghezza completa del pulsante per dispositivi mobili */
+    }
+}
